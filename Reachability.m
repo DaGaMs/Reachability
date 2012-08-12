@@ -168,9 +168,6 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
         CFRelease(self.reachabilityRef);
         self.reachabilityRef = nil;
     }
-#ifdef DEBUG
-    NSLog(@"Reachability: dealloc");
-#endif
     
 #if !(__has_feature(objc_arc))
     [super dealloc];
